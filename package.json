@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.22",
@@ -8,6 +9,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node src/server.js",
+    "watch": "npm run backend & npm run frontend",
+    "frontend": "npm start --prefix frontend",
+    "backend": "npm run watch --prefix backend"
   }
 }
